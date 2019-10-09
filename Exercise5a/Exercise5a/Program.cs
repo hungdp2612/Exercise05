@@ -16,6 +16,8 @@ namespace Exercise5a
             char c = Console.ReadKey().KeyChar;
             Console.WriteLine(" " + Char2Code(c));
             Console.WriteLine(" " + IsUpper(c));
+            Console.WriteLine(" " + IsLower(c));
+            Console.WriteLine(c+" " + ToUpper(c));
         }
         public static void Print_a_to_z_v1()
         {
@@ -56,15 +58,26 @@ namespace Exercise5a
         }
         public static bool IsUpper(char c)
         {
-            
+            Console.Write("Is upper: ");
+            if (c > 65 && c < 90)
+                return true;
             return false;
         }
         public static bool IsLower(char c)
         {
+            Console.Write("Is Lower: ");
+            if (c > 97 && c < 122)
+                return true;
             return false;
         }
         public static char ToUpper(char c)
         {
+            for (char d = 'a'; d <= 'z'; d++)
+            {
+                if (c > 97 && c < 122)
+                    c++;
+                Console.Write(d);
+            }
             return (char)c;
         }
         public static char ToLower(char c)
